@@ -1,20 +1,49 @@
+:root {
+    --sea-green: #4c956c;
+    --melon: #ffc9b9;
+    --sienna: #bc6c25;
+}
+
+* { 
+    font-family: "PT Sans", sans-serif;
+}
+
 body {
     padding: 0px;
     margin: 0px;
 }
 
-div {
-    border: 1px solid red;
-}
-
 aside {
-    background-color:aqua;
+    background-color: var(--sea-green);
     grid-row-start: 1;
     grid-row-end: 8;
 }
 
+aside ul, .hero{
+    color: white;
+}
+
 h3 {
     font-size: 20px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin: 10px;
+}
+
+.hero {
+    font-size: 30px;
+    margin: 10px;
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+.main-menu {
+    margin-bottom: 40px;
 }
 .container {
     display: grid;
@@ -35,6 +64,10 @@ h3 {
     grid-template-rows: repeat(2, 50%);
 }
 
+#search-icon {
+    margin-left: 30px;
+    margin-top: 10px;
+}
 .content-container {
     grid-column-start: 2;
     grid-column-end: 6;
@@ -43,7 +76,6 @@ h3 {
     display: grid;
     grid-template-rows: repeat(4, auto);
     grid-template-columns: repeat(6, auto);
-    border: 1px solid blue;
 }
 
 .your-projects {
@@ -51,7 +83,11 @@ h3 {
     grid-column-end: 6;
     grid-row-start: 1;
     grid-row-end: 5;
-    border: 1px solid purple;
+    
+}
+
+.your-projects h3 {
+    color: var(--sienna);
 }
 
 .project-grid {
@@ -69,6 +105,10 @@ h3 {
     grid-column-end: 7;
     grid-row-start: 1;
     grid-row-end: 3;
+}
+
+.announcements h3 { 
+    color: var(--sienna);
 }
 
 .announcement-item {
@@ -90,6 +130,10 @@ h3 {
     grid-row-end: 5;
 }
 
+.trending h3 {
+    color: var(--sienna);
+}
+
 .your-projects h3 {
     margin-left: 20px;
 }
@@ -98,6 +142,18 @@ h3 {
     height: 130px;
     margin: 10px;
     padding: 10px;
+    background-color: var(--sienna);
+    padding: 0px;
+    padding-left: 15px;
+    border-radius: 12px;
+}
+
+.project-item-main {
+    background-color: gainsboro;
+    margin-bottom: 0px;
+    height: 130px;
+    padding-left: 10px;
+    border-radius: 0px 12px 12px 0px;
 }
 
 .project-title {
@@ -111,6 +167,8 @@ h3 {
 .announcement-item {
     height: 50px;
     margin: 10px;
+    background-color: gainsboro;
+    border-radius: 12px;
 }
 
 .announcement-title {
@@ -131,17 +189,34 @@ h3 {
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 50% 50%;
+    background-color: gainsboro;
+    border-radius: 12px;
+}
+
+.trending-profile h4{
+    margin: 5px;
+}
+
+.trending-profile h6{
+    margin: 5px;
 }
 
 .trending h3 {
     margin-left: 20px;
 }
 
-.trending-profile button {
+.trending-profile a {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 3;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+.trending-profile a img {
+    border-radius: 50px;
+    width: 40px;
 }
 
 .trending-username {
@@ -150,7 +225,6 @@ h3 {
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
-    margin: 0px;
 }
 
 .trending-description {
@@ -164,14 +238,19 @@ h3 {
 
 .project-actions {
     margin-right: 0px;
+    margin-top: -10px;
     display: flex;
     justify-content: flex-end;
 }
 
-.project-actions button {
+.project-actions a {
     font-size: 11px;
-    margin: 10px;
+    display: flex;
+    align-items: flex-start;
+    color: var(--sea-green);
+    margin-left: 10px;
 }
+
 
 .search-container {
     grid-row-start: 1;
@@ -184,7 +263,7 @@ h3 {
 #search-box {
     width: 400px;
     margin: 10px;
-    margin-left: 50px;
+    margin-left: 10px;
     border-radius: 12px;
     border: 1px solid white;
 }
@@ -195,6 +274,7 @@ h3 {
     grid-column-start: 1;
     grid-column-end: 2;
     display: flex;
+    padding-left: 120px;
 }
 
 h5 {
@@ -221,6 +301,22 @@ h5 {
 
 .profile button {
     margin: 5px;
+    width: 30px;
+    height: 30px;
+}
+
+#saul {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    margin-right: 50px;
+    margin-top: 5px;
+}
+
+#notifications {
+    margin-right: 60px;
+    margin-top: 5px;
+    font-size: 30px;
 }
 
 .post-actions {
@@ -235,3 +331,21 @@ h5 {
     border-radius: 30px;
     width: 100px;
 }
+
+#main-profile-img {
+    border-radius: 50px;
+}
+
+.greeting-text {
+    margin-left: 5px;
+}
+
+.greeting-text h2 {
+    margin-top: 0px;
+}
+
+.greeting-text h5{
+    margin-bottom: 0px;
+    margin-top: 5px;
+}
+
